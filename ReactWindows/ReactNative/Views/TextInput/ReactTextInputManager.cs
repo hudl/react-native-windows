@@ -393,14 +393,16 @@ namespace ReactNative.Views.TextInput
         [ReactProp("multiline", DefaultBoolean = false)]
         public void SetMultiline(ReactTextBox view, bool multiline)
         {
-            view.AcceptsReturn = multiline;
+            view.Multiline = multiline;
+            view.AcceptsReturn = multiline && !view.BlurOnSubmit;
             view.TextWrapping = multiline ? TextWrapping.Wrap : TextWrapping.NoWrap;
         }
 
         [ReactProp("blurOnSubmit", DefaultBoolean = true)]
         public void SetBlurOnSubmit(ReactTextBox view, bool blurOnSubmit)
         {
-            view.AcceptsReturn = !blurOnSubmit;
+            view.BlurOnSubmit = blurOnSubmit;
+            view.AcceptsReturn = !blurOnSubmit && view.Multiline;
         }
 
         /// <summary>

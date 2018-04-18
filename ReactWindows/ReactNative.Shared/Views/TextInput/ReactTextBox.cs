@@ -93,6 +93,18 @@ namespace ReactNative.Views.TextInput
             set;
         }
 
+        public bool BlurOnSubmit
+        {
+            get;
+            set;
+        }
+
+        public bool Multiline
+        {
+            get;
+            set;
+        }
+
         public bool DimensionsUpdated
         {
             get;
