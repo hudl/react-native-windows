@@ -1,6 +1,5 @@
 using Newtonsoft.Json.Linq;
 using ReactNative.UIManager.Events;
-using System;
 
 namespace ReactNative.Views.TextInput
 {
@@ -20,7 +19,7 @@ namespace ReactNative.Views.TextInput
         /// <param name="text">The text.</param>
         /// <param name="eventCount">The event count.</param>
         public ReactTextChangedEvent(int viewTag, string text, int eventCount) 
-            : base(viewTag, TimeSpan.FromTicks(Environment.TickCount))
+            : base(viewTag)
         {
             _text = text;
             _eventCount = eventCount;

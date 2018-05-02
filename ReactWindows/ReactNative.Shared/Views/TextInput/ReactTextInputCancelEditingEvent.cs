@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
 using ReactNative.UIManager.Events;
-using System;
 
 namespace ReactNative.Views.TextInput
 {
@@ -9,7 +8,7 @@ namespace ReactNative.Views.TextInput
         private readonly string _text;
 
         public ReactTextInputCancelEditingEvent(int viewTag, string text)
-            : base(viewTag, TimeSpan.FromTicks(Environment.TickCount))
+            : base(viewTag)
         {
             _text = text;
         }
